@@ -1,0 +1,5 @@
+<template data-sly-template.group="${@ items='The navigation items for the current level'}">
+    <ul class="cmp-navigation__group" data-sly-list="${items}">
+        <sly data-sly-call="${item @ item=item}"></sly>
+    </ul>
+</template>

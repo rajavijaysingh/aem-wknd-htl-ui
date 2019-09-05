@@ -1,0 +1,18 @@
+<template data-sly-template.header="${@ properties,currentStyle,search,currentPage}">
+    <header class="wknd-header">
+        <div class="container">
+            <a class="wknd-header-logo"
+                href="${properties.rootPath || currentStyle.rootPath @ extension='html'}">WKND</a>
+            <!--/*<div class="cmp-search--header" data-sly-resource="${'search' @ resourceType='wknd/components/structure/search'}"></div>
+                <sly data-sly-use.searchtpl="search.html" />*/-->
+            <div class="cmp-search--header" data-sly-call="${search @ search=search,currentPage=currentPage}">
+            </div>
+            <!--/*<div class="cmp-navigation--header" id="header-navbar" data-sly-resource="${'navigation' @ resourceType='wknd/components/structure/navigation'}"></div>
+                <sly data-sly-use.navtpl="navigation/navigation.html" />  */-->
+            <div class="cmp-navigation--header" id="header-navbar"
+                data-sly-use.nav="${'./html/content/Navigation.js'}"
+                data-sly-call="${navigation @navigation=nav}">
+            </div>
+        </div>
+    </header>
+</template>

@@ -1,0 +1,5 @@
+<template data-sly-template.navigation="${@navigation}">
+    <nav class="cmp-navigation" role="navigation" itemtype="http://schema.org/SiteNavigationElement"
+        data-sly-test.hasContent="${navigation.items.length > 0}" data-sly-call="${group @ items=navigation.items}">
+    </nav>
+</template>

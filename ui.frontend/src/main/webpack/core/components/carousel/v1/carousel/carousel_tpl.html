@@ -1,0 +1,46 @@
+<template data-sly-template.carousel="${@carousel}">
+    <div class="carousel cmp-carousel--hero aem-GridColumn aem-GridColumn--default--12">
+        <div class="cmp-carousel" data-cmp-is="carousel" data-cmp-autoplay="${carousel.autoplay}"
+            data-cmp-delay="${carousel.delay}" data-cmp-autopause-disabled="${carousel.autopauseDisabled}">
+            <div class="cmp-carousel__content" data-sly-test="${carousel.items && carousel.items.length > 0}">
+                <sly data-sly-list="${carousel.items}">
+                    <div data-sly-call="${teaser @teaser=item,classes='cmp-teaser--slide'}" role="tabpanel"
+                        class="cmp-carousel__item${itemList.first ? ' cmp-carousel__item--active' : ' '}"
+                        data-cmp-hook-carousel="item">
+                </sly>
+            </div>
+            <div class="cmp-carousel__actions">
+                <button role="button" class="cmp-carousel__action cmp-carousel__action--previous"
+                    data-cmp-hook-carousel="previous" aria-label="Previous">
+                    <span class="cmp-carousel__action-icon"></span>
+                    <span class="cmp-carousel__action-text">Previous</span>
+                </button>
+                <button role="button" class="cmp-carousel__action cmp-carousel__action--next"
+                    data-cmp-hook-carousel="next" aria-label="Next">
+                    <span class="cmp-carousel__action-icon"></span>
+                    <span class="cmp-carousel__action-text">Next</span>
+                </button>
+                <button data-sly-test="${carousel.autoplay}" role="button"
+                    class="cmp-carousel__action cmp-carousel__action--pause" data-cmp-hook-carousel="pause"
+                    aria-label="Pause">
+                    <span class="cmp-carousel__action-icon"></span>
+                    <span class="cmp-carousel__action-text">Pause</span>
+                </button>
+                <button data-sly-test="${carousel.autoplay}" role="button"
+                    class="cmp-carousel__action cmp-carousel__action--play cmp-carousel__action--disabled"
+                    data-cmp-hook-carousel="play" aria-label="Play">
+                    <span class="cmp-carousel__action-icon"></span>
+                    <span class="cmp-carousel__action-text">Play</span>
+                </button>
+            </div>
+            <ol role="tablist" class="cmp-carousel__indicators" data-cmp-hook-carousel="indicators">
+                <sly data-sly-list.item="${carousel.items}">
+                    <li role="tab"
+                        class="cmp-carousel__indicator${itemList.first ? ' cmp-carousel__indicator--active' : ' '}"
+                        data-cmp-hook-carousel="indicator">${item.jcr:title}</li>
+                </sly>
+            </ol>
+        </div>
+    </div>
+    </div>
+</template>

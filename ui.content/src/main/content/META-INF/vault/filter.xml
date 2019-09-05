@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/wknd-htl" mode="merge"/>
+    <filter root="/content/wknd-htl" mode="merge"/>
+    <filter root="/content/dam/wknd-htl" mode="merge"/>
+</workspaceFilter>

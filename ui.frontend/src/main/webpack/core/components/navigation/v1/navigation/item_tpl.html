@@ -1,0 +1,7 @@
+<template data-sly-template.item="${@ item='The navigation item'}">
+    <li
+        class="cmp-navigation__item cmp-navigation__item--level-${item.level}${item.active ? ' cmp-navigation__item--active' : ' '}">
+        <sly data-sly-call="${itemContent @ item = item}"></sly>
+        <sly data-sly-test="${item.children.length > 0}" data-sly-call="${group @ items = item.children}"></sly>
+    </li>
+</template>

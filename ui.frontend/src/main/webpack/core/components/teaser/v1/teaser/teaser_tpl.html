@@ -1,0 +1,13 @@
+<template data-sly-template.teaser="${@ teaser,resource,classes}">
+    <div class="teaser ${classes ? classes : ' '}">
+        <div data-sly-test.hasContent="${teaser.imageResource || teaser.title || teaser.description || teaser.actions.length > 0}"
+            class="cmp-teaser">
+            <sly data-sly-call="${teaserImage @ teaser=teaser}"></sly>
+            <div class="cmp-teaser__content">
+                <sly data-sly-call="${title @ teaser=teaser}"></sly>
+                <sly data-sly-call="${description @ teaser=teaser}"></sly>
+                <sly data-sly-call="${actions @ teaser=teaser}"></sly>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <meta name="template" content="landing-page-template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-dependencies.js"></script>
+    <link rel="stylesheet" href="/etc.clientlibs/wknd/clientlibs/clientlib-base.css" type="text/css">
+    <!-- <script type="text/javascript">
+        (function () {
+            window.ContextHub = window.ContextHub || {};
+
+            /* setting paths */
+            ContextHub.Paths = ContextHub.Paths || {};
+            ContextHub.Paths.CONTEXTHUB_PATH = "/libs/settings/cloudsettings/legacy/contexthub";
+            ContextHub.Paths.RESOURCE_PATH = "\/conf\/wknd\/settings\/wcm\/templates\/landing\u002Dpage\u002Dtemplate\/structure\/_jcr_content\/contexthub";
+            ContextHub.Paths.SEGMENTATION_PATH = "";
+            ContextHub.Paths.CQ_CONTEXT_PATH = "";
+
+            /* setting initial constants */
+            ContextHub.Constants = ContextHub.Constants || {};
+            ContextHub.Constants.ANONYMOUS_HOME = "/home/users/1/1_ceOgKyV1ZKP2Pr-B8v";
+            ContextHub.Constants.MODE = "ui";
+        }());
+    </script>
+    <script src="/etc/cloudsettings.kernel.js/libs/settings/cloudsettings/legacy/contexthub"
+        type="text/javascript"></script>
+    <link rel="stylesheet" href="/libs/wcm/foundation/components/parsys/allowedcomponents/clientlibs.css"
+        type="text/css"> -->
+</head>
+
+<body class="page basicpage">
+    <div class="root responsivegrid">
+        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+            <!--root wrapper the value after aem-Grid-- is the number of columns default is 12
+        Default markup generated is 
+            <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                    child components
+                </div>
+            </div>       
+        
+        -->
+            <!-- include header component-->
+            <div class="header aem-GridColumn aem-GridColumn--default--12"
+                data-sly-call="${header @ properties=properties,search=search,currentPage=currentPage}">
+            </div>
+            <!-- main content responsive grid component-->
+           
+            <!-- responsive grid to include footer navigation component-->
+            <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12 cmp-layout-container--footer">
+                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                    <!-- footer navigation component included here-->
+                    <div class="navigation aem-GridColumn aem-GridColumn--default--12 cmp-navigation--footer"
+                        data-sly-use.nav="${'structure/navigation/Navigation.js'}"
+                        data-sly-call="${navigation @navigation=nav}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/etc.clientlibs/wknd/clientlibs/clientlib-base.js"></script>
+</body>
+
+</html>
