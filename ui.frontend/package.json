@@ -10,9 +10,7 @@
   "main": "src/main/webpack/site/main.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
-    "dev-default": "webpack -d --env dev --config ./webpack.dev.js && clientlib --verbose",
-    "dev-server": "webpack-dev-server -d --env dev --config ./webpack.dev.js --no-inline",
-    "prod-server": "webpack -p --config ./webpack.prod.js",
+    "dev-server": "webpack-dev-server -d --env dev --config ./webpack.dev.js --no-inline",    
     "dev": "webpack -d --config ./webpack.dev.js",
     "prod": "webpack -p --config ./webpack.prod.js && clientlib --verbose",
     "gen-pages": "node ./scripts/index.js",
