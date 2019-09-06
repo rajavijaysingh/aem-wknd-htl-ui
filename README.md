@@ -1,4 +1,5 @@
-The project is to demonstrate how to use htl for frontend development. 
+The project is to demonstrate how to use htl for frontend development.
+
 In this project 
 -	Front End devs have their own code base
 o	Code base uses HTL for HTML generation
