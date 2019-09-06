@@ -1,4 +1,22 @@
-The project is to demonstrate how to use htl for frontend development. WKND site is used as the reference for the UI development. As of now only WKND home page has been setup for frontend development.
+The project is to demonstrate how to use htl for frontend development. 
+In this project 
+-	Front End devs have their own code base
+o	Code base uses HTL for HTML generation
+o	Uses JS/CSS minification
+o	Webpack to serve html static site for hot UI dev changes
+-	MVN build in place to pull the latest js/css minify it and put it into AEM code base as part of build process
+
+For trying out the front dev, you would need Nodejs and npm installed.
+After cloning the repository, under ui.frontend folder run the below commands to start the static site
+
+-	npm install
+-	npm start
+
+And for deploying the complete AEM package along with js/css code at the root folder
+-	mvn clean install –PautoInstallPackage 
+
+
+WKND site is used as the reference for the UI development. As of now only WKND home page has been setup for frontend development.
 
 ui.frontend 
   - dist    --> folder used to serve the front-end dev files
