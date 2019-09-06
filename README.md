@@ -21,6 +21,9 @@ ui.frontend
   - tmp                       --> temporary folder used for template manuplation
   
  
-To start frontend development 
+To start frontend development run the below command inside ui.frontend
   -- npm install
   -- npm start
+
+To install the corresponding aem package install the below
+  -- mvn clean install -PautoInstallPackage
