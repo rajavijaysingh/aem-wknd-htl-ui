@@ -8,7 +8,9 @@ const {
   Runtime
 } = require('@adobe/htlengine');
 const outputDir = './dist'
-
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
 //to automate including all property object
 let payload = require("./collateProperties.js");
 //console.log(payload);
